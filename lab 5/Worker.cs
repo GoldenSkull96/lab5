@@ -36,7 +36,7 @@ namespace lab_5
         }
         public override void PrintInfo()
         {
-            Console.WriteLine($"{wage} {experience} {countDayOff}");
+            Console.WriteLine($"{wage} {experience}");
             Workers();
         }
     }
@@ -50,7 +50,7 @@ namespace lab_5
         public abstract void product();
         public override void PrintInfo()
         {
-            Console.WriteLine($"{wage} {experience} {countDayOff}");
+            Console.WriteLine($"{wage} {experience}");
         }
     }
     public class Director : Manage
@@ -77,6 +77,10 @@ namespace lab_5
         public override void product()
         {
             Console.WriteLine("Чертеж детали");
+        }
+        public override void PrintInfo()
+        {
+            Console.WriteLine($"{wage} {experience} {countDayOff}");
         }
     }
     public class Mechanic : Work
